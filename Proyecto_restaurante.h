@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//Clase 2 (Menú de Entradas)
+//Clase 1 (Menú de Entradas)
 
 class Menu_bebidas{
 
@@ -13,24 +13,21 @@ class Menu_bebidas{
     string nombre;
     float precio;
     int cantidad;
-    float porcentaje_alcohol;
     string ingredientes;
 
   public:
 
     Menu_bebidas();
-    Menu_bebidas(string nom, float pre, int can, float por, string ing): nombre(nom), precio(pre), cantidad(can), porcentaje_alcohol(por), ingredientes(ing){};
+    Menu_bebidas(string nom, float pre, int can, string ing): nombre(nom), precio(pre), cantidad(can), ingredientes(ing){};
 
     string get_nombre();
     float get_precio();
     int get_cantidad();
-    float get_porcentaje_alcohol();
     string get_ingredientes();
 
     void set_nombre(string);
     void set_precio(float);
     void set_cantidad(int);
-    void set_porcentaje_alcohol(float);
     void set_ingredientes(string);
 
 };
@@ -42,7 +39,6 @@ Menu_bebidas::Menu_bebidas(){
   nombre = "";
   precio = 0.0;
   cantidad = 0;
-  porcentaje_alcohol = 0.0;
   ingredientes = "";
 
 }
@@ -59,10 +55,6 @@ float Menu_bebidas::get_precio(){
 
 int Menu_bebidas::get_cantidad(){
   return cantidad;
-}
-
-float Menu_bebidas::get_porcentaje_alcohol(){
-  return porcentaje_alcohol;
 }
 
 string Menu_bebidas::get_ingredientes(){
@@ -82,9 +74,7 @@ void Menu_bebidas::set_precio(float pre){
 void Menu_bebidas::set_cantidad(int can){
   cantidad = can;
 }
-void Menu_bebidas::set_porcentaje_alcohol(float por){
-  porcentaje_alcohol = por;
-}
+
 void Menu_bebidas::set_ingredientes(string ing){
   ingredientes = ing;
 }
