@@ -1,4 +1,5 @@
 # Proyecto_Restaurante
 
-El propósito de este proyecto es poder administrar un restaurante. Desde la creación y manejo del menú hasta la administración de los diferentes empleados. 
-Esto aplicando conceptos de programación básica previamente aprendidos e implementando nuevos conceptos de c++ como las clases y los objetos.
+El propósito de este proyecto es desarrollar un sistema completo para la administración de un restaurante, que abarque desde la creación y gestión detallada del menú hasta la administración eficiente de los empleados. Este sistema permite que los usuarios del restaurante (como gerentes y personal administrativo) puedan agregar, modificar o eliminar elementos del menú, especificando detalles como nombre, precio, ingredientes, tipo de platillo y características específicas para cada categoría (bebidas, entradas, postres, etc.). Además, el sistema contempla la administración del personal, permitiendo registrar a los empleados, definir sus roles y responsabilidades, y organizar el equipo de trabajo de manera estructurada.
+
+Este sistema busca ofrecer una solución organizada, escalable y fácil de usar, que optimice la administración del restaurante y mejore la experiencia tanto de los empleados como de los clientes al ofrecer un control preciso sobre cada aspecto del servicio.
