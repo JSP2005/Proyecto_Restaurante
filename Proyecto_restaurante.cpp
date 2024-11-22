@@ -2,38 +2,54 @@
 
 #include<iostream>
 #include<string>
-#include"Proyecto_restaurante.h"
+#include"menu.h"
 
 using namespace std;
 
 // Main del programa
 
-int main(){
+int main() {
+    // Crear el menú 1 con parámetros
+    Menu menu1("Jugo de Naranja", 25.5, 100, "Naranjas frescas",
+               "Ensalada Cesar", 50.0, 50, "Lechuga, pollo, croutons",
+               "Tiramisu", 80.0, 30, "Mascarpone, cafe, cacao");
 
-  // Constructor de objetos de la clase Menu Bebidas
-  Menu_bebidas bebida_1("Naranjada", 30, 300,"Concentrado de naranja, agua mineral, azucar");
-  // Llamada a los métodos del objeto 1 de la clase Menu Bebidas
-  cout << "\n";
-  cout << "El nombre de la bebida es:" << bebida_1.get_nombre() << endl;
-  cout << "El precio de la bebida es:" << bebida_1.get_precio() << " $" << endl;
-  cout << "La cantidad de bebida es:" << bebida_1.get_cantidad() << " ml" << endl;
-  cout << "Los ingredientes de la bebida son:" << bebida_1.get_ingredientes() << endl;
+    // Crear el menú 2 con parámetros
+    Menu menu2("Agua Mineral", 15.0, 200, "Agua pura",
+               "Sopa de Lentejas", 35.0, 40, "Lentejas, zanahorias, cebolla",
+               "Helado de Vainilla", 45.0, 60, "Leche, vainilla, azúcar");
 
-  // Constructor de objetos de la clase Menu Entradas
-  Menu_entradas entrada_1("Papas a la francesa", 80, 150, "Papas, especies, queso y tocino");
-  // Llamada a los métodos del objeto 1 de la clase Menu Entradas
-  cout << "\n";
-  cout << "El nombre de la entrada es:" << entrada_1.get_nombre() << endl;
-  cout << "El precio de la entrada es:" << entrada_1.get_precio() << " $" << endl;
-  cout << "La cantidad de gramos en la entrada son:" << entrada_1.get_cantidad() << " g" << endl;
-  cout << "Los ingredientes de la entrada son:" << entrada_1.get_ingredientes() << endl;
+    // Crear el menú 3 con parámetros
+    Menu menu3("Limonada", 22.0, 150, "Limon, azucar, agua",
+               "Tacos de Pastor", 55.0, 80, "Carne de cerdo, piña, cilantro",
+               "Flan", 60.0, 50, "Leche, huevo, azucar");
 
-  // Constructor de objetos de la clase Menu Postres
-  Menu_postres postre_1("Cheesecake", 85, 160, "Queso cremna, mantequilla, huevo, azucar, galleta molida");
-  // Llamada a los métodos del objeto 1 de la clase Menu Postres
-  cout << "\n";
-  cout << "El nombre del postre es:" << postre_1.get_nombre() << endl;
-  cout << "El precio del postre es:" << postre_1.get_precio() << " $" << endl;
-  cout << "La cantidad de gramos en el postre son:" << postre_1.get_cantidad() << " g" << endl;
-  cout << "Los ingredientes del postre son:" << postre_1.get_ingredientes() << endl;
+    // Mostrar las opciones del menú 1
+    cout << "\nMenu 1: \n" << endl;
+    menu1.mostrar_bebida();
+    cout << "\n" << endl;
+    menu1.mostrar_entrada();
+    cout << "\n" << endl;
+    menu1.mostrar_postre();
+    cout << endl;
+
+    // Mostrar las opciones del menú 2
+    cout << "Menu 2: \n" << endl;
+    menu2.mostrar_bebida();
+    cout << "\n" << endl;
+    menu2.mostrar_entrada();
+    cout << "\n" << endl;
+    menu2.mostrar_postre();
+    cout << endl;
+
+    // Mostrar las opciones del menú 3
+    cout << "Menu 3: \n" << endl;
+    menu3.mostrar_bebida();
+    cout << "\n" << endl;
+    menu3.mostrar_entrada();
+    cout << "\n" << endl;
+    menu3.mostrar_postre();
+    cout << endl;
+
+    return 0;
 }
