@@ -1,74 +1,87 @@
-/* Bibliotecas */
+// Bibliotecas
 
 #include<string>
+
+// Se incluye el archivo de encabezado "menu_bebidas.h"
+// para heredar la clase `Menu_bebidas`.
 #include"menu_bebidas.h"
+
 using namespace std;
 
-// Clase Bebida sin alcohol
-
-class Bebida_sin_alcohol: public Menu_bebidas{
+// Clase Bebida_sin_alcohol
+// Representa una bebida sin alcohol, derivada de la clase base `Menu_bebidas`.
+// Añade un atributo adicional para almacenar la cantidad de azúcar en la bebida
+class Bebida_sin_alcohol: public Menu_bebidas {
 
   private:
-
-    int azucar;
+    int azucar; // Cantidad de azúcar en la bebida.
 
   public:
+    // Constructores:
+    Bebida_sin_alcohol(); // Constructor por defecto.
+    Bebida_sin_alcohol(int az); // Constructor con parámetros.
 
-    Bebida_sin_alcohol();
-    Bebida_sin_alcohol(int,az): azucar(az){};
+    // Métodos "get" y "set" para acceder y modificar el atributo `azucar`.
     int get_azucar();
-    void set_azucar();
-
+    void set_azucar(int az);
 };
 
-// Constructor para la clase Bebida sin alcohol
-
-Bebida_sin_alcohol::Bebida_sin_alcohol(){
+// Constructor por defecto para la clase Bebida_sin_alcohol.
+Bebida_sin_alcohol::Bebida_sin_alcohol() {
   azucar = 0;
 }
 
-// Funciones get para la clase Bebida sin alcohol
+// Constructor parametrizado para la clase Bebida_sin_alcohol.
+Bebida_sin_alcohol::Bebida_sin_alcohol(int az) {
+  azucar = az;
+}
 
-string Bebida_sin_alcohol::get_azucar(){
+// Funciones "get" y "set" para Bebida_sin_alcohol.
+
+int Bebida_sin_alcohol::get_azucar() {
   return azucar;
 }
 
-// Funciones set para la clase Bebida sin alcohol
-
-void Bebida_sin_alcohol::set_azucar(int az){
+void Bebida_sin_alcohol::set_azucar(int az) {
   azucar = az;
+}
 
-// Clase de Bebida con alcohol
-
-class Bebida_con_alcohol: public Menu_bebidas{
+// Clase Bebida_con_alcohol
+// Representa una bebida con alcohol, derivada de la clase base `Menu_bebidas`.
+// Añade un atributo adicional
+// para almacenar el porcentaje de alcohol en la bebida.
+class Bebida_con_alcohol: public Menu_bebidas {
 
   private:
-
-    float porcentaje_alcohol;
+    float porcentaje_alcohol; // Porcentaje de alcohol en la bebida.
 
   public:
+    // Constructores:
+    Bebida_con_alcohol(); // Constructor por defecto.
+    Bebida_con_alcohol(float alc); // Constructor con parámetros.
 
-    Bebida_con_alcohol();
-    Bebida_con_alcohol(int alc): porcentaje_alcohol(alc){};
+    // Métodos "get" y "set" para
+    // acceder y modificar el atributo `porcentaje_alcohol`.
     float get_porcentaje_alcohol();
-    void set_porcentaje_alcohol();
-
+    void set_porcentaje_alcohol(float alc);
 };
 
-// Constructor para la clase Bebida con alcohol
-
-Bebida_con_alcohol::Bebida_con_alcohol(){
+// Constructor por defecto para la clase Bebida_con_alcohol.
+Bebida_con_alcohol::Bebida_con_alcohol() {
   porcentaje_alcohol = 0.0;
 }
 
-// Funciones get para la clase Bebida con alcohol
+// Constructor parametrizado para la clase Bebida_con_alcohol.
+Bebida_con_alcohol::Bebida_con_alcohol(float alc) {
+  porcentaje_alcohol = alc;
+}
 
-string Bebida_con_alcohol::get_porcentaje_alcohol(){
+// Funciones "get" y "set" para Bebida_con_alcohol.
+
+float Bebida_con_alcohol::get_porcentaje_alcohol() {
   return porcentaje_alcohol;
 }
 
-// Funciones set para la clase Bebida con alcohol
-
-void Bebida_con_alcohol::set_porcentaje_alcohol(float alc){
+void Bebida_con_alcohol::set_porcentaje_alcohol(float alc) {
   porcentaje_alcohol = alc;
 }
